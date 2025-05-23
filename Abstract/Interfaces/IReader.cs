@@ -1,4 +1,4 @@
-namespace CliMenu.Interfaces
+namespace CliMenu.Abstract.Interfaces
 {
     public interface IReader
     {

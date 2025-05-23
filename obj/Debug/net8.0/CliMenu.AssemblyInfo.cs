@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CliMenu")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da5a2e3a62ffe4fba1f23125704ba171df989035")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e439af211660da748290b33b7c58d6a278206f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CliMenu")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CliMenu")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

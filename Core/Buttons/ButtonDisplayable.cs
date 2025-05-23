@@ -1,18 +1,22 @@
 using CliMenu.Helpers;
-using CliMenu.Interfaces;
+using CliMenu.Abstract.Interfaces;
 
 namespace CliMenu.Core.Buttons
 {
-    public class ButtonDisplayer(ButtonVisual visual, string displayFormat = "[<label>]") : IDisplayer
+    public class ButtonDisplayable : IDisplayable
     {
-        private readonly string displayFormat = displayFormat;
-        private readonly ButtonVisual visual = visual;
+        private readonly string displayFormat;
+        private readonly ButtonVisual visual;
 
-        public void Display()
+        public ButtonDisplayable(ButtonVisual visual, string displayFormat = "[<label>]")
         {
-            Console.ForegroundColor = visual.Color;
-            Console.Write(ParseDisplayFormat());
-            Console.ResetColor();
+            this.displayFormat = displayFormat;
+            this.visual = visual;
+        }
+
+        public string GetDisplay()
+        {
+            return ParseDisplayFormat();
         }
 
         private string ParseDisplayFormat()
