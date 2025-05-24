@@ -1,4 +1,4 @@
-EasyButton button = new EasyButton((string text) => Console.WriteLine(text), [], new ButtonDisplayer(new ButtonVisual("lol", ConsoleColor.Blue, 'a')));
+EasyButton button = new EasyButton((string text) => Console.WriteLine(text), [], new ButtonDisplayable(new ButtonVisual("lol", ConsoleColor.Blue, 'a')));
 EasyButton[] buttons = [button];
 
-button.Display();
+Console.WriteLine(button.GetDisplay());

@@ -1,7 +1,7 @@
 using CliMenu.Enums;
 using CliMenu.Abstract.Interfaces;
 
-namespace CliMenu.Core.Menus
+namespace CliMenu.Display.Menus
 {
     public class MenuReader : IReader, IKeyInputHandler
     {

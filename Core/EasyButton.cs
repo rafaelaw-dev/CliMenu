@@ -1,7 +1,7 @@
 using CliMenu.Abstract;
 using CliMenu.Abstract.Interfaces;
 
-namespace CliMenu.Core.Buttons
+namespace CliMenu.Core
 {
     public class EasyButton : BaseButton
     {

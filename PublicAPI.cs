@@ -1,2 +1,3 @@
-global using CliMenu.Core.Buttons;
-global using CliMenu.Core.Menus;
+global using CliMenu.Core;
+global using CliMenu.Display.Buttons;
+global using CliMenu.Display.Menus;

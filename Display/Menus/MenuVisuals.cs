@@ -1,4 +1,4 @@
-namespace CliMenu.Core.Menus
+namespace CliMenu.Display.Menus
 {
     public class MenuVisuals
     {

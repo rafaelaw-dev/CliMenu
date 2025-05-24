@@ -1,4 +1,4 @@
-namespace CliMenu.Core.Buttons
+namespace CliMenu.Display.Buttons
 {
     public class ButtonVisual
     {

@@ -1,7 +1,7 @@
 using CliMenu.Helpers;
 using CliMenu.Abstract.Interfaces;
 
-namespace CliMenu.Core.Buttons
+namespace CliMenu.Display.Buttons
 {
     public class ButtonDisplayable : IDisplayable
     {

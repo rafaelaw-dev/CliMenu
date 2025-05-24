@@ -3,7 +3,7 @@ using CliMenu.Abstract.Interfaces;
 using CliMenu.Enums;
 using CliMenu.Helpers;
 
-namespace CliMenu.Core.Menus
+namespace CliMenu.Core
 {
     public class ButtonMenu : Displayer, IMenu
     {
