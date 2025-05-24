@@ -1,15 +1,19 @@
 using CliMenu.Enums;
-using CliMenu.Abstract.Interfaces;
+using CliMenu.Abstract.Interfaces.Input;
+using CliMenu.Abstract.Interfaces.Navigation;
+using CliMenu.Abstract.Interfaces.Backend;
 
 namespace CliMenu.Display.Menus
 {
     public class MenuReader : IReader, IKeyInputHandler
     {
-        private readonly IMenu menu;
+        private readonly INavigable navigable;
+        private readonly IExecutable executable;
 
-        public MenuReader(IMenu menu)
+        public MenuReader(INavigable navigable, IExecutable executable)
         {
-            this.menu = menu;
+            this.navigable = navigable;
+            this.executable = executable;
         }
 
         public void Read()
@@ -18,28 +22,28 @@ namespace CliMenu.Display.Menus
             KeyInputHandler(key.Key);
         }
 
-        public void KeyInputHandler(ConsoleKey input)
+        public virtual void KeyInputHandler(ConsoleKey input)
         {
             switch (input)
             {
                 case ConsoleKey.UpArrow:
-                    menu.Navigation(Directions.UP);
+                    navigable.Navigation(Directions.UP);
                     break;
 
                 case ConsoleKey.DownArrow:
-                    menu.Navigation(Directions.DOWN);
+                    navigable.Navigation(Directions.DOWN);
                     break;
 
                 case ConsoleKey.RightArrow:
-                    menu.Navigation(Directions.RIGHT);
+                    navigable.Navigation(Directions.RIGHT);
                     break;
 
                 case ConsoleKey.LeftArrow:
-                    menu.Navigation(Directions.LEFT);
+                    navigable.Navigation(Directions.LEFT);
                     break;
 
                 case ConsoleKey.Enter:
-                    menu.Execute();
+                    executable.Execute();
                     break;
             }
         }

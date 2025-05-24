@@ -1,5 +1,5 @@
 using System.Text;
-using CliMenu.Abstract.Interfaces;
+using CliMenu.Abstract.Interfaces.Display;
 
 namespace CliMenu.Display.Menus
 {
