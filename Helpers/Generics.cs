@@ -28,5 +28,17 @@ namespace CliMenu.Helpers
 
             return var;
         }
+
+        public static object[] Fill(object[] array, int times, object defaultValue)
+        {
+            List<object> list = array.ToList();
+
+            for (int i = 0; i < times; i++)
+            {
+                list.Add(defaultValue);
+            }
+
+            return list.ToArray();
+        }
     }
 }

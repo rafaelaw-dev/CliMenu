@@ -1,4 +1,15 @@
-EasyButton button = new EasyButton((string text) => Console.WriteLine(text), [], new ButtonDisplayable(new ButtonVisual("lol", ConsoleColor.Blue, 'a')));
-EasyButton[] buttons = [button];
+using CliMenu.Display.LowLevel;
+using CliMenu.Helpers;
 
-Console.WriteLine(button.GetDisplay());
+TerminalBuffer buffer = new(new());
+buffer.UpdateTerminal("lol \n lol");
+Console.ReadKey();
+buffer.UpdateTerminal("lmao");
+Console.ReadKey();
+buffer.Restart();
+buffer.UpdateTerminal(AlignText.Align("POGGERS SHADOW BUT", Console.WindowWidth/2, 5));
+Console.ReadKey();
+buffer.UpdateTerminal("rafaelaw");
+Console.ReadKey();
+buffer.Exit();
+
