@@ -1,2 +1,1 @@
-# CliMenu v0 commit 6
-# DON'T USE THIS YET, STILL IN DEVELOPMENT
+# CliMenu Alpha1 W/ Display

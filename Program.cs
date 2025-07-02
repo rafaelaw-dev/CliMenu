@@ -1,4 +1,14 @@
-EasyButton button = new EasyButton((string text) => Console.WriteLine(text), [], new ButtonDisplayable(new ButtonVisual("lol", ConsoleColor.Blue, 'a')));
-EasyButton[] buttons = [button];
+﻿using CliMenu.Source.Components;
 
-Console.WriteLine(button.GetDisplay());
+
+public class Program
+{
+    public static void Main()
+    {
+        ActionButton ac = new("button", "text");
+
+        ac.AddCallback((sender, e) => Console.WriteLine("lol"));
+
+        ac.Execute();
+    }   
+}
