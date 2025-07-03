@@ -1,14 +1,20 @@
-﻿using CliMenu.Source.Components;
+﻿using CliMenu.Source.Base;
+using CliMenu.Source.Components;
+using CliMenu.Source.Components.Helpers;
 
 
 public class Program
 {
     public static void Main()
     {
-        ActionButton ac = new("button", "text");
+        Label label = new("component", "Ola", new NoExecutable(), new CustomLabelDisplayer(label), )
+    }
+}
 
-        ac.AddCallback((sender, e) => Console.WriteLine("lol"));
-
-        ac.Execute();
-    }   
+internal class CustomLabelDisplayer(Label component) : Displayer<Label>(component)
+{
+    public override string GetDisplay()
+    {
+        return "lol";
+    }
 }
