@@ -14,14 +14,11 @@ namespace CliMenu.Helpers;
 /// A component to extend, constrained to
 /// <see cref="BaseComponent{IDisplayer, IInputHandler}"/>.
 /// </typeparam>
-public abstract class ExtendsComponent<TDisp, TInput, TComponent>(
-    TComponent baseComponent,
-    string name,
-    bool enableOnStart = true)
-    : BaseComponent<TDisp, TInput>(name, enableOnStart)
+public abstract class ExtendsComponent<TDisp, TInput, TComponent>(TComponent baseComponent, string name, ComponentConfig<TDisp, TInput> config, bool enableOnStart = true)
+    : BaseComponent<TDisp, TInput>(name, config, enableOnStart)
     where TDisp : IDisplayer
     where TInput : IInputHandler
-    where TComponent : BaseComponent<IDisplayer, IInputHandler>
+    where TComponent : IComponent
 {
     /// <summary>
     /// The base component instance being wrapped or extended.

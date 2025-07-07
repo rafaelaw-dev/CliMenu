@@ -8,7 +8,7 @@ namespace CliMenu.Base;
 /// </summary>
 /// <typeparam name="TComponent">Type of component, constrained to <see cref="BaseComponent{IDisplayer, IInputHandler}"/>.</typeparam>
 public abstract class Displayer<TComponent>(TComponent component) : Extends<TComponent>(component), IDisplayer
-    where TComponent : BaseComponent<IDisplayer, IInputHandler>
+    where TComponent : IComponent
 {
     /// <summary>
     /// Event fired when the component is Displayed.

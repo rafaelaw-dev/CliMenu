@@ -12,7 +12,7 @@ namespace CliMenu.Helpers;
 /// <typeparam name="TComponent">Type of component extending 
 /// <see cref="BaseComponent{IDisplayer, IInputHandler}"/>.</typeparam>
 public abstract class Extends<TComponent>(TComponent component)
-    where TComponent : BaseComponent<IDisplayer, IInputHandler>
+    where TComponent : IComponent
 {
     /// <summary>
     /// The component instance being extended.

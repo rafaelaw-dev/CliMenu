@@ -9,7 +9,7 @@ namespace CliMenu.Base;
 /// </summary>
 /// <typeparam name="TComponent">Type of component, constrained to <see cref="BaseComponent{IExecutable, IDisplayer, IInputHandler}"/>.</typeparam>
 public abstract class InputHandler<TComponent>(TComponent component) : Extends<TComponent>(component), IInputHandler
-    where TComponent : BaseComponent<IDisplayer, IInputHandler>
+    where TComponent : IComponent
 {
     /// <summary>
     /// Event fired when a key is pressed.
