@@ -16,11 +16,6 @@ public interface ILifeCycle
     void Enable();
 
     /// <summary>
-    /// Updates the component state.
-    /// </summary>
-    void Update();
-
-    /// <summary>
     /// Disables the component.
     /// </summary>
     void Disable();

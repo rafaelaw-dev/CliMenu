@@ -6,17 +6,18 @@ namespace CliMenu.Base;
 /// <summary>
 /// Abstract base class for display behavior of a component.
 /// </summary>
-/// <typeparam name="TComponent">Type of component, constrained to <see cref="BaseComponent{IExecutable, IDisplayer, IInputHandler}"/>.</typeparam>
+/// <typeparam name="TComponent">Type of component, constrained to <see cref="BaseComponent{IDisplayer, IInputHandler}"/>.</typeparam>
 public abstract class Displayer<TComponent>(TComponent component) : Extends<TComponent>(component), IDisplayer
-    where TComponent : BaseComponent<IExecutable, IDisplayer, IInputHandler>
+    where TComponent : BaseComponent<IDisplayer, IInputHandler>
 {
     /// <summary>
-    /// The component associated with this display behavior.
+    /// Event fired when the component is Displayed.
     /// </summary>
-    protected TComponent Component => component;
+    public event EventHandler? OnDisplay;
 
-    /// <summary>
-    /// Gets the string representation to display for the component.
-    /// </summary>
+    /// <inheritdoc/>
+    /// <remarks>
+    /// If you are overriding this method, please call <see cref="OnDisplay"/> on it. 
+    /// </remarks>
     public abstract string GetDisplay();
 }

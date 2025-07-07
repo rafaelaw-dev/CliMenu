@@ -8,6 +8,6 @@ public interface IInputHandler
     /// <summary>
     /// Handle a console key input.
     /// </summary>
-    /// <param name="key">The key pressed.</param>
+    /// <param name="key">The pressed key.</param>
     void HandleInput(ConsoleKey key);
 }
