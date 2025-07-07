@@ -4,7 +4,7 @@ All future updates for CliMenu will be documented in this file
 
 ## [Unreleased] CliMenu BETA - Coming Soon :\)
 
-## [0.2.1] CliMenu Core Architecture v3 - Jul 5, 2025
+## [0.2.1] CliMenu Core Architecture v3 - Jul 7, 2025
 ### Added:
 - `BaseComponent` has two new behaviors: `FocusManager` and `LifeCycle`.
 - You can now use `Extends<TComponent>` to embed an inner component in your classes and also use 
