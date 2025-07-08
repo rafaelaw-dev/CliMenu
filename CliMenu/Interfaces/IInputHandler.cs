@@ -9,5 +9,5 @@ public interface IInputHandler
     /// Handle a console key input.
     /// </summary>
     /// <param name="key">The pressed key.</param>
-    void HandleInput(ConsoleKey key);
+    void HandleInput(IComponent component, ConsoleKey key);
 }

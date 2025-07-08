@@ -9,5 +9,5 @@ namespace CliMenu.Helpers.NoOp;
 public sealed record NoDisplay : IDisplayer, INoOp
 {
     /// <inheritdoc/>
-    public string GetDisplay() => "<NoDisplay>";
+    public string GetDisplay(IComponent component) => "<NoDisplay>";
 }

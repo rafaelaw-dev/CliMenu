@@ -4,6 +4,20 @@ All future updates for CliMenu will be documented in this file
 
 ## [Unreleased] CliMenu BETA - Coming Soon :\)
 
+## [0.2.2] CliMenu Core Architecture v4 - Jul 8, 2025
+### Added:
+
+### Changed:
+- Namespaces were refactored.
+- Now you use `ProtectedGetDisplay` and `ProtectedHandleInput`.
+- `Displayer` and `HandleInput`.
+- Other minor things.
+
+### Fixed:
+
+### Removed:
+- `Extends<TComponent>` 
+
 ## [0.2.1] CliMenu Core Architecture v3 Fixes - Jul 7, 2025
 ### Added:
 - New interface `IComponent`.

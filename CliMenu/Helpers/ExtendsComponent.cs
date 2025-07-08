@@ -1,4 +1,4 @@
-using CliMenu.Base;
+using CliMenu.Components.Base;
 using CliMenu.Interfaces;
 
 namespace CliMenu.Helpers;

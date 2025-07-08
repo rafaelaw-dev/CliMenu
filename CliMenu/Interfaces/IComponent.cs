@@ -1,3 +1,3 @@
 namespace CliMenu.Interfaces;
 
-public interface IComponent : IDisplayer, IInputHandler;
+public interface IComponent;

@@ -8,5 +8,5 @@ namespace CliMenu.Helpers.NoOp;
 public sealed class NoInput : IInputHandler, INoOp
 {
     /// <inheritdoc/>
-    public void HandleInput(ConsoleKey key) { }
+    public void HandleInput(IComponent component, ConsoleKey key) { }
 }

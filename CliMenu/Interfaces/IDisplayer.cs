@@ -9,5 +9,5 @@ public interface IDisplayer
     /// Returns the string to be displayed by the component.
     /// </summary>
     /// <returns>Display string.</returns>
-    string GetDisplay();
+    string GetDisplay(IComponent component);
 }

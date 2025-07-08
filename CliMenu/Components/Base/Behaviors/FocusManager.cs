@@ -1,7 +1,6 @@
 using CliMenu.Interfaces;
-using CliMenu.Utils;
 
-namespace CliMenu.Components.Behaviours;
+namespace CliMenu.Components.Base.Behaviors;
 
 /// <summary>
 /// Represents a focus controller for components that implement <see cref="IFocusable"/>.

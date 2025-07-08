@@ -1,7 +1,7 @@
 using CliMenu.Helpers;
 using CliMenu.Interfaces;
 
-namespace CliMenu.Base;
+namespace CliMenu.Components.Base;
 
 /// <summary>
 /// Abstract base class representing a generic component with executable, display and input handler behaviors.
@@ -16,28 +16,30 @@ public abstract class BaseComponent<TDisp, TInput> : IComponent
     /// <summary>
     /// The display behavior of this component.
     /// </summary>
-    protected TDisp Displayer { get; private set; }
+    public TDisp Displayer { get; private set; }
 
     /// <summary>
     /// The input handler behavior of this component.
     /// </summary>
-    protected TInput InputHandler { get; private set; }
+    public TInput InputHandler { get; private set; }
 
     /// <summary>
     /// The focus behavior of this component.
     /// </summary>
-    protected IFocusManager FocusManager { get; }
+    public IFocusManager FocusManager { get; }
 
     /// <summary>
     /// The life cycle behaviour of this component. (Determines if it is active or not, )
     /// </summary>
-    protected ILifeCycle LifeCycle { get; }
+    public ILifeCycle LifeCycle { get; }
 
     /// <summary>
     /// Name identifier for this component.
     /// </summary>
     public string Name { get; }
 
+    protected abstract ComponentConfig<TDisp, TInput> Defaults { get; }
+    
     /// <summary>
     /// Initializes a new instance of the <see cref="BaseComponent{TDisp, TInput}"/> class.
     /// Optionally enables the component on start if <paramref name="enableOnStart"/> is true.
@@ -45,11 +47,11 @@ public abstract class BaseComponent<TDisp, TInput> : IComponent
     /// <param name="name">The identifier name of the component.</param>
     /// <param name="config">The <see cref="ComponentConfig{TDisp, TInput}"/> configuration of the component behaviours. </param> 
     /// <param name="enableOnStart">Determines whether the component should be enabled immediately after construction. Defaults to true.</param>
-    public BaseComponent(
-        string name, ComponentConfig<TDisp, TInput> config, bool enableOnStart = true)
+    public BaseComponent(string name, ComponentConfig<TDisp, TInput>? config = null, bool enableOnStart = true)
     {
         Name = name;
 
+        config ??= Defaults;
         Displayer = config.Disp;
         InputHandler = config.Input;
         FocusManager = config.FocusManager;
@@ -59,10 +61,10 @@ public abstract class BaseComponent<TDisp, TInput> : IComponent
     }
     
     /// <inheritdoc/>
-    public string GetDisplay() => Displayer.GetDisplay();
+    public string GetDisplay() => Displayer.GetDisplay(this);
 
     /// <inheritdoc/>
-    public void HandleInput(ConsoleKey key) => InputHandler.HandleInput(key);
+    public void HandleInput(ConsoleKey key) => InputHandler.HandleInput(this, key);
 
     /// <summary>
     /// Enables the component.
