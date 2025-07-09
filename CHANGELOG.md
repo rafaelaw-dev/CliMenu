@@ -4,6 +4,16 @@ All future updates for CliMenu will be documented in this file
 
 ## [Unreleased] CliMenu BETA - Coming Soon :\)
 
+## [0.3.0] CliMenu Components v1
+### Added:
+
+### Changed:
+- Now `ComponentConfig`'s constructor sets a default value to `FocusManager` and `LifeCycle` by default.
+
+### Fixed:
+
+### Removed:
+
 ## [0.2.2] CliMenu Core Architecture v4 - Jul 8, 2025
 ### Added:
 

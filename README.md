@@ -1,4 +1,4 @@
-# CliMenu Core Architecture v3
+# CliMenu Components v1
 
 **⚠️ Warning: Under Development**
 
