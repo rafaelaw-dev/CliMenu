@@ -1,6 +1,6 @@
 using CliMenu.Interfaces;
 
-namespace CliMenu.Components.Base.Behaviors;
+namespace CliMenu.Components.Behaviors;
 
 /// <summary>
 /// Provides a base implementation for lifecycle behavior in components,

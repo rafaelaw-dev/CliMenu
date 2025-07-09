@@ -1,4 +1,4 @@
-using CliMenu.Components.Base.Behaviors;
+using CliMenu.Components.Behaviors;
 using CliMenu.Interfaces;
 
 namespace CliMenu.Helpers;
@@ -18,7 +18,7 @@ public sealed record ComponentConfig<TDisp, TInput>
     public TInput Input { get; }
     public IFocusManager FocusManager { get; }
     public ILifeCycle LifeCycle { get; }
-    
+
     /// <summary>
     /// Immutable configuration record that encapsulates the default behaviors for a component.
     /// Contains the display behavior, input handler, life cycle manager, and focus manager.

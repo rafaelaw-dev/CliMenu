@@ -1,7 +1,7 @@
 using CliMenu.Interfaces;
 using CliMenu.Utils;
 
-namespace CliMenu.Components.Base.Behaviors;
+namespace CliMenu.Components.Behaviors;
 
 /// <summary>
 /// Abstract base class for input handling behavior of a component.

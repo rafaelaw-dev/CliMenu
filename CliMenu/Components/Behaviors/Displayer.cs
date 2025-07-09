@@ -2,7 +2,7 @@ using CliMenu.Helpers;
 using CliMenu.Interfaces;
 using CliMenu.Utils;
 
-namespace CliMenu.Components.Base.Behaviors;
+namespace CliMenu.Components.Behaviors;
 
 /// <summary>
 /// Abstract base class for display behavior of a component.
