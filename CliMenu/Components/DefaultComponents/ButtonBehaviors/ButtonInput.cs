@@ -1,6 +1,6 @@
 using CliMenu.Components.Behaviors;
 
-namespace CliMenu.Components.ButtonBehaviors;
+namespace CliMenu.Components.DefaultComponents.ButtonBehaviors;
 
 public class ButtonInput : InputHandler<Button>
 {

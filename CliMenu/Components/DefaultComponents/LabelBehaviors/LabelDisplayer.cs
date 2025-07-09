@@ -1,6 +1,6 @@
 using CliMenu.Components.Behaviors;
 
-namespace CliMenu.Components.LabelBehaviors;
+namespace CliMenu.Components.DefaultComponents.LabelBehaviors;
 
 public class LabelDisplayer : Displayer<Label>
 {

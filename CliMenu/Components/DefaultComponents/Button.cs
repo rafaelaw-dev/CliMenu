@@ -1,9 +1,9 @@
 using CliMenu.Components.Base;
 using CliMenu.Components.Behaviors;
-using CliMenu.Components.ButtonBehaviors;
+using CliMenu.Components.DefaultComponents.ButtonBehaviors;
 using CliMenu.Helpers;
 
-namespace CliMenu.Components;
+namespace CliMenu.Components.DefaultComponents;
 
 public sealed class Button(string name, string text, Action callback, ComponentConfig<Displayer<Button>, InputHandler<Button>>? config = null, bool enableOnStart = true) 
     : BaseComponent<Displayer<Button>, InputHandler<Button>>(name, config, enableOnStart)
