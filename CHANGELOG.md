@@ -6,6 +6,7 @@ All future updates for CliMenu will be documented in this file
 
 ## [0.3.0] CliMenu Components v1
 ### Added:
+- `Label` and `LabelDisplayer`
 
 ### Changed:
 - Now `ComponentConfig`'s constructor sets a default value to `FocusManager` and `LifeCycle` by default.
