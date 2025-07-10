@@ -18,7 +18,7 @@ All future updates for CliMenu will be documented in this file
 ### Removed:
 - Useless usings
 
-## [0.2.2] CliMenu Core Architecture v4 - Jul 8, 2025
+## [0.2.2] CliMenu Core Architecture v4 - Jul 8, 2025 
 ### Added:
 
 ### Changed:
