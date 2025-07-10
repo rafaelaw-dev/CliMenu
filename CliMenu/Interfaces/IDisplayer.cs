@@ -1,13 +1,14 @@
 namespace CliMenu.Interfaces;
 
 /// <summary>
-/// Interface for providing display content as string.
+/// Defines behavior for providing a display string representation of a component.
 /// </summary>
 public interface IDisplayer
 {
     /// <summary>
-    /// Returns the string to be displayed by the component.
+    /// Returns the string representation to be displayed for the specified component.
     /// </summary>
-    /// <returns>Display string.</returns>
+    /// <param name="component">The component instance to render.</param>
+    /// <returns>A string representing the display output of the component.</returns>
     string GetDisplay(IComponent component);
 }

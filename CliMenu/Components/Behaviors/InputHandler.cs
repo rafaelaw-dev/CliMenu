@@ -4,21 +4,24 @@ using CliMenu.Utils;
 namespace CliMenu.Components.Behaviors;
 
 /// <summary>
-/// Abstract base class for input handling behavior of a component.
+/// Abstract base class for handling input behavior of a component.
 /// </summary>
-/// <typeparam name="TComponent">Type of component, constrained to <see cref="BaseComponent{IExecutable, IDisplayer, IInputHandler}"/>.</typeparam>
+/// <typeparam name="TComponent">The type of component this input handler operates on, constrained to <see cref="IComponent"/>.</typeparam>
 public abstract class InputHandler<TComponent> : IInputHandler
     where TComponent : IComponent
 {
     /// <summary>
-    /// Event fired when a key is pressed.
+    /// Event triggered when a key is pressed.
+    /// Subscribers can listen to key press events with the pressed key as argument.
     /// </summary>
     public event EventHandler<SingleArgumentEventArgs<ConsoleKey>>? OnKeyPress;
 
     /// <summary>
-    /// Handle a console key input.
+    /// Handles the input key for the specific component.
+    /// Override this method to implement custom input behavior.
     /// </summary>
-    /// <param name="key">The pressed key.</param>
+    /// <param name="component">The component receiving the input.</param>
+    /// <param name="key">The key that was pressed.</param>
     protected abstract void ProtectedHandleInput(TComponent component, ConsoleKey key);
 
     /// <inheritdoc/>

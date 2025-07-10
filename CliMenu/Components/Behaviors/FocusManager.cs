@@ -3,9 +3,9 @@ using CliMenu.Interfaces;
 namespace CliMenu.Components.Behaviors;
 
 /// <summary>
-/// Represents a focus controller for components that implement <see cref="IFocusable"/>.
-/// Manages the focus state <see cref="IsFocused"/>  and notifies listeners when the focus changes
-/// via the <see cref="OnChangeFocus"/> event.
+/// Manages the focus state for components implementing <see cref="IFocusable"/>.
+/// Tracks whether the component is focused via <see cref="IsFocused"/>,
+/// and notifies subscribers of focus changes through the <see cref="OnFocus"/> and <see cref="OnBlur"/> events.
 /// </summary>
 public class FocusManager : IFocusManager
 {
@@ -24,12 +24,12 @@ public class FocusManager : IFocusManager
     }
 
     /// <summary>
-    /// Event fired when the object is focused
+    /// Event fired when the component receives focus.
     /// </summary>
     public event EventHandler? OnFocus;
 
     /// <summary>
-    /// Event fired when the object is blured (looses focus)
+    /// Event fired when the component loses focus.
     /// </summary>
     public event EventHandler? OnBlur;
 

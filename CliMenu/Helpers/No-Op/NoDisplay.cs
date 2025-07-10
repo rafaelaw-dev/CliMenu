@@ -1,4 +1,3 @@
-
 using CliMenu.Interfaces;
 
 namespace CliMenu.Helpers.NoOp; 

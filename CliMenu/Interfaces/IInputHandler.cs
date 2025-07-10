@@ -1,13 +1,14 @@
 namespace CliMenu.Interfaces;
 
 /// <summary>
-/// Interface for handling input keys.
+/// Defines behavior for handling input key events for a component.
 /// </summary>
 public interface IInputHandler
 {
     /// <summary>
-    /// Handle a console key input.
+    /// Processes a console key input for the specified component.
     /// </summary>
-    /// <param name="key">The pressed key.</param>
+    /// <param name="component">The component receiving the input.</param>
+    /// <param name="key">The console key that was pressed.</param>
     void HandleInput(IComponent component, ConsoleKey key);
 }

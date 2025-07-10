@@ -6,14 +6,17 @@ All future updates for CliMenu will be documented in this file
 
 ## [0.3.0] CliMenu Components v1
 ### Added:
-- `Label` and `LabelDisplayer`
+- `Label` and `LabelDisplayer`.
+- `Button`, `ButtonDisplayer` and `ButtonInput`.
 
 ### Changed:
 - Now `ComponentConfig`'s constructor sets a default value to `FocusManager` and `LifeCycle` by default.
+- Components have been refactored to be more explicit and clear in their API.
 
 ### Fixed:
 
 ### Removed:
+- Useless usings
 
 ## [0.2.2] CliMenu Core Architecture v4 - Jul 8, 2025
 ### Added:

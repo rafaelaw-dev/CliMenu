@@ -1,22 +1,23 @@
 namespace CliMenu.Interfaces;
 
 /// <summary>
-/// Interface for lifecycle management of components.
+/// Defines the lifecycle management behavior of a component,
+/// controlling its active state.
 /// </summary>
 public interface ILifeCycle
 {
     /// <summary>
-    /// Gets a value indicating whether the component is currently active.
+    /// Gets a value indicating whether the component is currently active/enabled.
     /// </summary>
     bool IsActive { get; }
 
     /// <summary>
-    /// Enables the component.
+    /// Activates or enables the component.
     /// </summary>
     void Enable();
 
     /// <summary>
-    /// Disables the component.
+    /// Deactivates or disables the component.
     /// </summary>
     void Disable();
 }

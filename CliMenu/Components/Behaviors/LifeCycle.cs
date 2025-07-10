@@ -3,8 +3,8 @@ using CliMenu.Interfaces;
 namespace CliMenu.Components.Behaviors;
 
 /// <summary>
-/// Provides a base implementation for lifecycle behavior in components,
-/// handling activation state and related events.
+/// Implements the lifecycle behavior for components,
+/// managing the active state and raising events on enable or disable.
 /// </summary>
 public class LifeCycle : ILifeCycle
 {
@@ -23,12 +23,12 @@ public class LifeCycle : ILifeCycle
     }
 
     /// <summary>
-    /// Event fired when the object is enabled.
+    /// Event triggered when the component is enabled.
     /// </summary>
     public event EventHandler? OnEnable;
 
     /// <summary>
-    /// Event fired when the object is disabled.
+    /// Event triggered when the component is disabled.
     /// </summary>
     public event EventHandler? OnDisable;
 

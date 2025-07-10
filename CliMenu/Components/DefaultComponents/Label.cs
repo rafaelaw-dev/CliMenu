@@ -6,9 +6,23 @@ using CliMenu.Helpers.NoOp;
 
 namespace CliMenu.Components.DefaultComponents;
 
-public sealed class Label(string name, string text, ComponentConfig<Displayer<Label>, NoInput>? config = null, bool enableOnStart = true) : BaseComponent<Displayer<Label>, NoInput>(name, config, enableOnStart)
+public sealed class Label : BaseComponent<Displayer<Label>, NoInput>
 {
-    public string Text { get; set; } = text;
+    public string Text { get; set; }
 
-    protected override ComponentConfig<Displayer<Label>, NoInput> Defaults => new(new LabelDisplayer(), new NoInput(), new NoFocus());
+    protected override ComponentConfig<Displayer<Label>, NoInput> Defaults => new(
+        new LabelDisplayer(),
+        new NoInput(),
+        new NoFocus()
+    );
+
+    public Label(
+        string name,
+        string text,
+        ComponentConfig<Displayer<Label>, NoInput> config,
+        bool enableOnStart) 
+    : base(name, config, enableOnStart)
+    {
+        Text = text;
+    }
 }

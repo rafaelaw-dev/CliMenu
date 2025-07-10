@@ -1,25 +1,25 @@
-using CliMenu.Helpers;
 using CliMenu.Interfaces;
-using CliMenu.Utils;
 
 namespace CliMenu.Components.Behaviors;
 
 /// <summary>
-/// Abstract base class for display behavior of a component.
+/// Represents the abstract base class for display behavior of a component.
 /// </summary>
-/// <typeparam name="TComponent">Type of component, constrained to <see cref="IComponent"/>.</typeparam>
+/// <typeparam name="TComponent">The type of component this displayer is responsible for rendering.</typeparam>
 public abstract class Displayer<TComponent> : IDisplayer
     where TComponent : IComponent
 {
     /// <summary>
-    /// Event fired when the component is Displayed.
+    /// Event that is triggered whenever the component is displayed.
     /// </summary>
     public event EventHandler? OnDisplay;
 
     /// <summary>
-    /// Returns the string to be displayed by the component.
+    /// Returns the string representation to display the component.
+    /// Must be overridden by derived classes to define specific rendering logic.
     /// </summary>
-    /// <returns>Display string.</returns>
+    /// <param name="component">The component instance to be rendered.</param>
+    /// <returns>The string to display for the given component.</returns>
     protected abstract string ProtectedGetDisplay(TComponent component);
 
     /// <inheritdoc/>
