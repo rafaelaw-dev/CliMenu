@@ -8,6 +8,7 @@ All future updates for CliMenu will be documented in this file
 ### Added:
 - `Label` and `LabelDisplayer`.
 - `Button`, `ButtonDisplayer` and `ButtonInput`.
+- `Toggle`, `ToggleDisplayer` and `ToggleInput`.
 
 ### Changed:
 - Now `ComponentConfig`'s constructor sets a default value to `FocusManager` and `LifeCycle` by default.
