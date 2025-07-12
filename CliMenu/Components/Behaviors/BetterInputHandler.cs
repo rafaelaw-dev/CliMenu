@@ -41,13 +41,20 @@ public abstract class BetterInputHandler<TComponent> : InputHandler<TComponent>
         keys.Remove(binder);
     }
 
+    public IEnumerable<KeyActionBinder<TComponent>> FindKeyBinder(ConsoleKey key) => 
+        keys.Where(k => k.Key == key);
+
+    public IEnumerable<KeyActionBinder<TComponent>> FindKeyBinder(Action<TComponent> action) =>
+        keys.Where(k => k.Action == action);
+
     /// <summary>
     /// Handles the input by invoking all actions associated with the pressed key.
     /// </summary>
     /// <param name="component">The component on which to invoke the actions.</param>
     /// <param name="key">The key pressed by the user.</param>
-    protected override void ProtectedHandleInput(TComponent component, ConsoleKey key)
+    protected override void ProtectedHandleInput(TComponent component, ConsoleKeyInfo keyInfo)
     {
+        var key = keyInfo.Key;
         foreach (var binder in keys.Where(k => k.Key == key))
             binder.Action?.Invoke(component);
     }

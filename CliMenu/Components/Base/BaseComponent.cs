@@ -84,7 +84,7 @@ public abstract class BaseComponent<TDisp, TInput> : IComponent
     /// Handles input for this component using its assigned <see cref="InputHandler"/>.
     /// </summary>
     /// <param name="key">The console key that was pressed.</param>
-    public void HandleInput(ConsoleKey key) => InputHandler.HandleInput(this, key);
+    public void HandleInput(ConsoleKeyInfo key) => InputHandler.HandleInput(this, key);
 
     /// <summary>
     /// Enables the component using its assigned <see cref="LifeCycle"/>.

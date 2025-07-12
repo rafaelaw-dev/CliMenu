@@ -14,7 +14,7 @@ public abstract class InputHandler<TComponent> : IInputHandler
     /// Event triggered when a key is pressed.
     /// Subscribers can listen to key press events with the pressed key as argument.
     /// </summary>
-    public event EventHandler<SingleArgumentEventArgs<ConsoleKey>>? OnKeyPress;
+    public event EventHandler<SingleArgumentEventArgs<ConsoleKeyInfo>>? OnKeyPress;
 
     /// <summary>
     /// Handles the input key for the specific component.
@@ -22,10 +22,10 @@ public abstract class InputHandler<TComponent> : IInputHandler
     /// </summary>
     /// <param name="component">The component receiving the input.</param>
     /// <param name="key">The key that was pressed.</param>
-    protected abstract void ProtectedHandleInput(TComponent component, ConsoleKey key);
+    protected abstract void ProtectedHandleInput(TComponent component, ConsoleKeyInfo keyInfo);
 
     /// <inheritdoc/>
-    public void HandleInput(IComponent component, ConsoleKey key)
+    public void HandleInput(IComponent component, ConsoleKeyInfo keyInfo)
     {
         if (!component.IsActive)
             return;
@@ -33,7 +33,7 @@ public abstract class InputHandler<TComponent> : IInputHandler
         if (component is not TComponent typedComponent)
             throw new ArgumentException(null, nameof(component));
 
-        OnKeyPress?.Invoke(this, new SingleArgumentEventArgs<ConsoleKey>(key));
-        ProtectedHandleInput(typedComponent, key);
+        OnKeyPress?.Invoke(this, new SingleArgumentEventArgs<ConsoleKeyInfo>(keyInfo));
+        ProtectedHandleInput(typedComponent, keyInfo);
     }
 }
