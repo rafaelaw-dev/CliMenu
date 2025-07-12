@@ -6,16 +6,15 @@ namespace CliMenu.Components.DefaultComponents.ToggleBehaviors;
 /// Defines the input behavior for a <see cref="Toggle"/> component.
 /// Toggles the boolean value of the component when the Enter key is pressed.
 /// </summary>
-public class ToggleInput : InputHandler<Toggle>
+public class ToggleInput : BetterInputHandler<Toggle>
 {
-    /// <inheritdoc/>
-    protected override void ProtectedHandleInput(Toggle component, ConsoleKey key)
+    /// <summary>
+    /// The key that toggles the value. 
+    /// </summary>
+    public ConsoleKey ToggleValueKey { get; } = ConsoleKey.Enter;
+
+    public ToggleInput()
     {
-        switch (key)
-        {
-            case ConsoleKey.Enter:
-                component.Value = !component.Value;
-                break;
-        }
+        AddKey(ToggleValueKey, toggle => toggle.Value = !toggle.Value);
     }
 }

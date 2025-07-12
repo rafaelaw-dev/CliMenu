@@ -27,7 +27,13 @@ public abstract class InputHandler<TComponent> : IInputHandler
     /// <inheritdoc/>
     public void HandleInput(IComponent component, ConsoleKey key)
     {
+        if (!component.IsActive)
+            return;
+
+        if (component is not TComponent typedComponent)
+            throw new ArgumentException(null, nameof(component));
+
         OnKeyPress?.Invoke(this, new SingleArgumentEventArgs<ConsoleKey>(key));
-        ProtectedHandleInput((TComponent)component, key);
+        ProtectedHandleInput(typedComponent, key);
     }
 }

@@ -43,6 +43,12 @@ public abstract class BaseComponent<TDisp, TInput> : IComponent
     /// </summary>
     protected abstract ComponentConfig<TDisp, TInput> Defaults { get; }
 
+    /// <inheritdoc/>
+    public bool IsActive => LifeCycle.IsActive;
+
+    /// <inheritdoc/>
+    public bool IsFocused => FocusManager.IsFocused;
+
     /// <summary>
     /// Initializes a new instance of the component.
     /// </summary>

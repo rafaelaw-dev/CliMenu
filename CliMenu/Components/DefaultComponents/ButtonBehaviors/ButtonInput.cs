@@ -6,16 +6,15 @@ namespace CliMenu.Components.DefaultComponents.ButtonBehaviors;
 /// Input handler for the <see cref="Button"/> component.
 /// Handles key presses and triggers a click event when Enter or Space is pressed.
 /// </summary>
-public class ButtonInput : InputHandler<Button>
+public class ButtonInput : BetterInputHandler<Button>
 {
-    /// <inheritdoc/>
-    protected override void ProtectedHandleInput(Button component, ConsoleKey key)
+    /// <summary>
+    /// The key that activates the button's callback.
+    /// </summary>
+    public ConsoleKey CallbackKey { get; } = ConsoleKey.Enter;
+
+    public ButtonInput()
     {
-        switch (key)
-        {
-            case ConsoleKey.Enter:
-                component.Callback();
-                break;
-        }
+        AddKey(CallbackKey, button => button.Callback());
     }
 }
