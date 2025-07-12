@@ -7,12 +7,15 @@ All future updates for CliMenu will be documented in this file
 ## [0.3.0] CliMenu Components v1
 ### Added:
 - Added new components and their behaviors: Label, InputField, Toggle, Bar, Slider and Button.
+- Added a better and easier input system
 
 ### Changed:
 - Now `ComponentConfig`'s constructor sets a default value to `FocusManager` and `LifeCycle` by default.
 - Components have been refactored to be more explicit and clear in their API.
+- Some namespaces changed.
 
 ### Fixed:
+- None
 
 ### Removed:
 - Useless usings
