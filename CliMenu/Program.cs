@@ -2,7 +2,7 @@ using CliMenu.Components.DefaultComponents;
 
 Console.Clear();
 
-InputField field = new("inputfield", "ShadowBut");
+InputField field = new("inputfield", "ShadowBut", "LOL");
 
 while (true)
 {

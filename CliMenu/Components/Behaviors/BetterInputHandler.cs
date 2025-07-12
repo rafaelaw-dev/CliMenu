@@ -41,9 +41,21 @@ public abstract class BetterInputHandler<TComponent> : InputHandler<TComponent>
         keys.Remove(binder);
     }
 
-    public IEnumerable<KeyActionBinder<TComponent>> FindKeyBinder(ConsoleKey key) => 
+    /// <summary>
+    /// Finds all key bindings associated with a specific console key.
+    /// Useful for determining what actions are triggered by a given key.
+    /// </summary>
+    /// <param name="key">The console key to search for.</param>
+    /// <returns>A collection of key-action binders associated with the specified key.</returns>
+    public IEnumerable<KeyActionBinder<TComponent>> FindKeyBinder(ConsoleKey key) =>
         keys.Where(k => k.Key == key);
 
+    /// <summary>
+    /// Finds all key bindings that are associated with a specific action.
+    /// Useful for checking which keys trigger a given action.
+    /// </summary>
+    /// <param name="action">The action to search for in the key bindings.</param>
+    /// <returns>A collection of key-action binders that invoke the specified action.</returns>
     public IEnumerable<KeyActionBinder<TComponent>> FindKeyBinder(Action<TComponent> action) =>
         keys.Where(k => k.Action == action);
 

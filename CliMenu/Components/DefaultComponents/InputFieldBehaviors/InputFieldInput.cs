@@ -2,8 +2,13 @@ using CliMenu.Components.Behaviors;
 
 namespace CliMenu.Components.DefaultComponents.InputFieldBehaviors;
 
+/// <summary>
+/// Handles user input for the <see cref="InputField"/> component.
+/// Appends typed characters to the input value and supports basic editing via backspace.
+/// </summary>
 public class InputFieldInput : InputHandler<InputField>
 {
+    /// <inheritdoc/>
     protected override void ProtectedHandleInput(InputField component, ConsoleKeyInfo keyInfo)
     {
         var key = keyInfo.Key;
